@@ -135,6 +135,10 @@ ro.vendor.use_data_netmgrd=true
 telephony.lteOnCdmaDevice=1
 persist.sys.radio.force_lte_ca=true
 
+# Radio Video Calling
+persist.vendor.radio.vdp_on_ims_cap=1
+persist.vendor.qti.telephony.vt_cam_interface=2
+
 # Sensors
 ro.qti.sensors.dev_ori=false
 ro.vendor.sensors.dev_ori=false

@@ -11,6 +11,7 @@ persist.sys.smartamp=1
 persist.vendor.audio.fluence.voicecall=true
 persist.vendor.audio.fluence.voicerec=false
 persist.vendor.audio.fluence.speaker=true
+ro.audio.spatializer_enabled=true
 
 # Bluetooth
 bt.max.hfpclient.connections=1

@@ -335,4 +335,7 @@
 	             As of Honeycomb, blurring is not supported anymore. -->
 	        <bool name="config_sf_slowBlur">false</bool>
 
+    <!-- Enable Zram writeback feature to allow unused pages in zram be written to flash. -->
+    <bool name="config_zramWriteback">true</bool>
+
 </resources>

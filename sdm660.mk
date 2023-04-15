@@ -363,6 +363,9 @@ PRODUCT_PACKAGES += \
     init.target.rc \
     ueventd.qcom.rc
 
+PRODUCT_COPY_FILES += \
+   $(LOCAL_PATH)/rootdir/etc/fstab.zram:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.zram
+   
 PRODUCT_PACKAGES += \
     init.class_main.sh \
     init.qcom.early_boot.sh \

@@ -28,6 +28,7 @@ import /vendor/etc/init/hw/init.qcom.usb.rc
 import /vendor/etc/init/hw/init.msm.usb.configfs.rc
 import /vendor/etc/init/hw/init.target.rc
 import /vendor/etc/init/hw/init.${ro.boot.device}.target.rc
+import /vendor/etc/init/hw/init.zram.size.rc
 
 on early-init
     mount debugfs debugfs /sys/kernel/debug
@@ -111,6 +112,9 @@ on late-fs
 
     # Mount RW partitions which need run fsck
     mount_all /vendor/etc/fstab.qcom --late
+
+    # Enable ZRAM on boot_complete
+    swapon_all /vendor/etc/fstab.zram
 
 on post-fs
     chmod 0755 /sys/kernel/debug/tracing

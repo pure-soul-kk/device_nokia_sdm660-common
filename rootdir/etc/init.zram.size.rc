@@ -1,0 +1,58 @@
+# Copyright (c) 2021-2022 dlwlrma123
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+
+service zram-off /system/bin/sh /vendor/etc/init/hw/init.zram-off.sh
+    class core
+    user root
+    oneshot
+
+service zram-on /system/bin/sh /vendor/etc/init/hw/init.zram-on.sh
+    class core
+    user root
+    oneshot
+
+on property:sys.zram.size=0
+    start zram-off
+    write /sys/block/zram0/reset 1
+
+on property:sys.zram.size=1
+    start zram-off
+    write /sys/block/zram0/reset 1
+    write /sys/block/zram0/disksize 1145386496
+    start zram-on
+
+on property:sys.zram.size=2
+    start zram-off
+    write /sys/block/zram0/reset 1
+    write /sys/block/zram0/disksize 2145386496
+    start zram-on
+
+on property:sys.zram.size=3
+    start zram-off
+    write /sys/block/zram0/reset 1
+    write /sys/block/zram0/disksize 3145386496
+    start zram-on
+
+on property:sys.zram.size=4
+    start zram-off
+    write /sys/block/zram0/reset 1
+    write /sys/block/zram0/disksize 4145386496
+    start zram-on
+
+on property:sys.zram.size=5
+    start zram-off
+    write /sys/block/zram0/reset 1
+    write /sys/block/zram0/disksize 5145386496
+    start zram-on

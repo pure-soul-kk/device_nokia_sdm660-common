@@ -56,7 +56,6 @@ vendor/lib64/com.qualcomm.qti.ant@1.0.so
 etc/permissions/audiosphere.xml
 framework/audiosphere.jar
 vendor/bin/audioflacapp
-vendor/lib/soundfx/libasphere.so
 vendor/lib/soundfx/libaudiopreprocessing.so
 vendor/lib/soundfx/libqcbassboost.so
 vendor/lib/soundfx/libqcreverb.so
@@ -92,6 +91,9 @@ vendor/lib64/libaudioconfigstore.so
 vendor/lib64/libaudioparsers.so
 vendor/lib64/libqtigef.so
 vendor/lib64/libtinycompress.so
+
+# Audio (Spactial) - from raven-user 13 TQ1A.230105.002 9325679
+vendor/lib/soundfx/libspatialaudio.so|1a193072c8acc0de7cdbbdad86b84c5902d6931d
 
 # Audio (ACDB)
 vendor/etc/acdbdata/adsp_avs_config.acdb

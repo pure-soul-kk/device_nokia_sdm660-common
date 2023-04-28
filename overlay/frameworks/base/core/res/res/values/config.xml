@@ -335,4 +335,8 @@
 	             As of Honeycomb, blurring is not supported anymore. -->
 	        <bool name="config_sf_slowBlur">false</bool>
 
+    <!-- The default value for whether head tracking for
+         spatial audio is enabled for a newly connected audio device -->
+    <bool name="config_spatial_audio_head_tracking_enabled_default">true</bool>
+    
 </resources>
